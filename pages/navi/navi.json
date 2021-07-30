@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "leo-button":"/components/leo-button/leo-button"
+  },
+  "navigationBarTitleText": "导航"
+}

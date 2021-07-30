@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+
+<leo-bar barInfo="{{barInfo}}" bindsearch="bindSearch" />
+
+<view style="padding-top:{{barInfo.height}}px">
+
+  <leo-swiper banner="{{banner}}" />
+  <leo-article articleList="{{articleList}}"/>
+</view>

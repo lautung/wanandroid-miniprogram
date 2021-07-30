@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+
+  <view class="input-wrapper">
+    <image src="/images/search.png"></image>
+    <input placeholder="输入关键字，多个用空格隔开" maxlength="20" value="{{content}}" bindinput="bindInput" bindconfirm="bindSearch"></input>
+    <image src="/images/delete.png" wx:if="{{content.length > 0}}" bindtap = "bindClean"></image>
+  </view>
+
+  <view class="cancel" wx:if="{{showSearchResult}}" bindtap="bindCancelSearch">取消</view>
+
+</view>
+
+<view class="empty-top"></view>
+
+<view wx:if="{{!showSearchResult}}">
+  <view class="search-hint" wx:if="{{searchHistoryList.length > 0}}">
+    <view class="search-wrapper">
+      <view class="search-title">搜索记录</view>
+      <view class="clean" bindtap="bindCleanSave">清空记录</view>
+    </view>
+    <leo-button hotkeyList="{{searchHistoryList}}" isTitle="{{false}}" leo-border="leo-border-history" leo-hover="leo-hover-history" bindkey="bindRecord" />
+  </view>
+
+  <view class="search-hint">
+    <view class="search-title">热门搜索</view>
+   <leo-button hotkeyList="{{hotkeyList}}" isTitle="{{false}}" leo-border="leo-border-hot" leo-hover="leo-hover-hot" bindkey="bindRecord" />
+  </view>
+</view>
+
+<view wx:if="{{showSearchResult}}">
+  <leo-article articleList="{{searchData}}"/>
+</view>

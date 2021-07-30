@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "leo-bar":"/components/leo-bar/leo-bar",
+    "leo-swiper": "/components/leo-swiper/leo-swiper",
+    "leo-article": "/components/leo-article/leo-article"
+  },
+  "enablePullDownRefresh":true,
+  "navigationStyle":"custom"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "leo-button":"/components/leo-button/leo-button",
+    "leo-article": "/components/leo-article/leo-article"
+  },
+  "navigationBarTitleText": "搜索"
+}
